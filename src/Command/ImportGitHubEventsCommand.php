@@ -12,7 +12,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  * This command must import GitHub events.
  * You can add the parameters and code you want in this command to meet the need.
  */
-class ImportGitHubEventsCommand extends Command
+final class ImportGitHubEventsCommand extends Command
 {
     protected static $defaultName = 'app:import-github-events';
 

@@ -2,7 +2,7 @@
 
 namespace App\Dto;
 
-class SearchInput
+final class SearchInput
 {
     /**
      * @var \DateTimeImmutable
