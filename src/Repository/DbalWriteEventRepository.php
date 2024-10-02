@@ -7,7 +7,7 @@ use App\Dto\SearchInput;
 use Doctrine\DBAL\Connection;
 use phpDocumentor\Reflection\DocBlock\Tags\Author;
 
-class DbalWriteEventRepository implements WriteEventRepository
+final class DbalWriteEventRepository implements WriteEventRepository
 {
     private Connection $connection;
 

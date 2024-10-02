@@ -9,7 +9,7 @@ use App\Entity\Repo;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 
-class EventFixtures extends Fixture
+final class EventFixtures extends Fixture
 {
     public const EVENT_1_ID = 1;
     public const ACTOR_1_ID = 1;

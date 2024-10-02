@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Liip\TestFixturesBundle\Services\DatabaseToolCollection;
 use Liip\TestFixturesBundle\Services\DatabaseTools\AbstractDatabaseTool;
 
-class EventControllerTest extends WebTestCase
+final class EventControllerTest extends WebTestCase
 {
     protected AbstractDatabaseTool $databaseTool;
     private static $client;

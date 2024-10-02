@@ -5,7 +5,7 @@ namespace App\Repository;
 use App\Dto\SearchInput;
 use Doctrine\DBAL\Connection;
 
-class DbalReadEventRepository implements ReadEventRepository
+final class DbalReadEventRepository implements ReadEventRepository
 {
     private Connection $connection;
 

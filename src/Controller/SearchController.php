@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\SerializerInterface;
 
-class SearchController
+final class SearchController
 {
     private ReadEventRepository $repository;
     private SerializerInterface $serializer;

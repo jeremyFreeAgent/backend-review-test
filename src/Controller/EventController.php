@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
-class EventController
+final class EventController
 {
     private WriteEventRepository $writeEventRepository;
     private ReadEventRepository $readEventRepository;
