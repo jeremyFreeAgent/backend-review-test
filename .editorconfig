@@ -11,10 +11,10 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[docker-compose.yml]
+[compose.yaml]
 indent_size = 2
 
-[docker-compose.override.yml]
+[compose.override.yaml]
 indent_size = 2
 
 [*.md]
