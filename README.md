@@ -40,7 +40,7 @@ Your PR will be reviewed during our technical interview, and it will be a suppor
 
 ## :computer: How to use development environment
 
-You need `make`, `docker` and `docker-compose` installed to start the development environment.
+You need `make`, `docker` installed to start the development environment.
 
 ### Start the development environment
 
