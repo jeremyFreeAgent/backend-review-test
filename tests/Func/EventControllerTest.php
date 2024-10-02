@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Tests\Func;
 
 use App\DataFixtures\EventFixtures;
@@ -98,7 +100,7 @@ final class EventControllerTest extends WebTestCase
             <<<JSON
               {
                 "comment": "short"
-                
+
             }
             JSON,
             <<<JSON
