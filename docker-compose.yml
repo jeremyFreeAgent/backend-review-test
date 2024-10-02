@@ -1,4 +1,3 @@
-version: '3.4'
 services:
   php:
     user: ${FIXUID:-1000}:${FIXGID:-1000}
