@@ -17,4 +17,23 @@ final class EventType extends AbstractEnumType
         self::COMMENT => 'Comment',
         self::PULL_REQUEST => 'Pull Request',
     ];
+
+    public static function fromGitHubEventType(string $type): string
+    {
+        return match ($type) {
+            'PushEvent' => EventType::COMMENT,
+            'CommitCommentEvent' => EventType::COMMIT,
+            'PullRequestEvent' => EventType::PULL_REQUEST,
+            default => throw new \InvalidArgumentException("Unknown event type: {$type}"),
+        };
+    }
+
+    public static function getGitHubEventTypes(): array
+    {
+        return [
+            'PushEvent',
+            'CommitCommentEvent',
+            'PullRequestEvent',
+        ];
+    }
 }
