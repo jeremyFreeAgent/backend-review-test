@@ -109,3 +109,33 @@ func-test: var/docker.up ## Run PhpUnit functionnal testsuite
 	@$(call log,Running ...)
 	$(PHP_EXEC) bin/phpunit -v --testsuite func --testdox
 	@$(call log_success,Done)
+
+.PHONY: qa-phpstan
+qa-phpstan: vendor ## Run PHPStan
+	@$(call log,Running ...)
+	@$(PHP_RUN) vendor-bin/phpstan/vendor/phpstan/phpstan/phpstan
+	@$(call log_success,Done)
+
+.PHONY: qa-php-cs-fixer
+qa-php-cs-fixer: vendor ## Run PHP-CS-Fixer
+	@$(call log,Running ...)
+	@$(PHP_RUN) vendor-bin/php-cs-fixer/vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --verbose --diff --ansi --dry-run
+	@$(call log_success,Done)
+
+.PHONY: dependencies-audit
+dependencies-audit: vendor ## Run dependencies audit
+	@$(call log,Running ...)
+	@$(PHP_RUN) composer audit
+	@$(call log_success,Done)
+
+.PHONY: dependencies-outdated
+dependencies-outdated: vendor ## Run dependencies outdated
+	@$(call log,Running ...)
+	@$(PHP_RUN) composer outdated --strict
+	@$(call log_success,Done)
+
+.PHONY: dependencies-soft-dependencies
+dependencies-soft-dependencies: vendor ## Run dependencies soft-dependencies
+	@$(call log,Running ...)
+	@$(PHP_RUN) vendor-bin/composer-require-checker/vendor/maglnet/composer-require-checker/bin/composer-require-checker check
+	@$(call log_success,Done)
